@@ -28,4 +28,4 @@ Run evaluate.py file
 Python evaluate.py 
 
 
-** Refer to the output screenshots folder 
+Refer to the output screenshots folder 
