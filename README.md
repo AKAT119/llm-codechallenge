@@ -28,4 +28,6 @@ Run evaluate.py file
 Python evaluate.py 
 
 
-Refer to the output screenshots folder 
+- Refer to the output screenshots folder 
+- The full dataset is provided for your reference for evaluation use the file in the dataset folder.
+- The initial phase (LLMChallange_FineTuning.ipynb) was provided as proof of trying different models, for running the project, ignore that file.
