@@ -2,7 +2,7 @@
 
 ## Project Description
 
-LangChian and ChatGPT 3.5 Turbo - Generatin the Pyomo codes based on user constraints input
+LangChian and ChatGPT 3.5 Turbo - Pyomo code Generation based on user constraints input
 
 ## Installation
 
