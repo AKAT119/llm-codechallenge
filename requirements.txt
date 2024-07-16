@@ -1,0 +1,9 @@
+openai
+langchain
+langchain_community
+langchain_openai
+pyomo
+flake8
+black
+nltk
+scikit-learn

@@ -1,0 +1,103 @@
+[
+    {
+        "prompt": "Please add constraint: 3 * x + 5 * y >= 5",
+        "code": "\nfrom pyomo.environ import *\nmodel = ConcreteModel()\nmodel.x = Var(domain=NonNegativeReals)\nmodel.y = Var(domain=NonNegativeReals)\nmodel.obj = Objective(expr=2 * model.x + 1 * model.y, sense=minimize)\n\n# Define constraints\nmodel.constraint1 = Constraint(expr=model.x + 2 * model.y <= 8)\nmodel.constraint2 = Constraint(expr=3 * model.x + 2 * model.y <= 12)\nmodel.constraint3 = Constraint(expr=3 * model.x + 5 * model.y >= 5)\n\n# Solve the model\nsolver = SolverFactory('glpk')\nresult = solver.solve(model)\n\n# Display results\nmodel.display()\n"
+    },
+    {
+        "prompt": "Please add constraint: 10 * x + 9 * y <= 5",
+        "code": "\nfrom pyomo.environ import *\nmodel = ConcreteModel()\nmodel.x = Var(domain=NonNegativeReals)\nmodel.y = Var(domain=NonNegativeReals)\nmodel.obj = Objective(expr=3 * model.x + 1 * model.y, sense=maximize)\n\n# Define constraints\nmodel.constraint1 = Constraint(expr=model.x + 2 * model.y <= 8)\nmodel.constraint2 = Constraint(expr=3 * model.x + 2 * model.y <= 12)\nmodel.constraint3 = Constraint(expr=10 * model.x + 9 * model.y <= 5)\n\n# Solve the model\nsolver = SolverFactory('glpk')\nresult = solver.solve(model)\n\n# Display results\nmodel.display()\n"
+    },
+    {
+        "prompt": "Please add constraint: 1 * x + 8 * y <= 8",
+        "code": "\nfrom pyomo.environ import *\nmodel = ConcreteModel()\nmodel.x = Var(domain=NonNegativeReals)\nmodel.y = Var(domain=NonNegativeReals)\nmodel.obj = Objective(expr=2 * model.x + 3 * model.y, sense=maximize)\n\n# Define constraints\nmodel.constraint1 = Constraint(expr=model.x + 2 * model.y <= 8)\nmodel.constraint2 = Constraint(expr=3 * model.x + 2 * model.y <= 12)\nmodel.constraint3 = Constraint(expr=1 * model.x + 8 * model.y <= 8)\n\n# Solve the model\nsolver = SolverFactory('glpk')\nresult = solver.solve(model)\n\n# Display results\nmodel.display()\n"
+    },
+    {
+        "prompt": "Please add constraint: 4 * x + 5 * y >= 11",
+        "code": "\nfrom pyomo.environ import *\nmodel = ConcreteModel()\nmodel.x = Var(domain=NonNegativeReals)\nmodel.y = Var(domain=NonNegativeReals)\nmodel.obj = Objective(expr=1 * model.x + 1 * model.y, sense=maximize)\n\n# Define constraints\nmodel.constraint1 = Constraint(expr=model.x + 2 * model.y <= 8)\nmodel.constraint2 = Constraint(expr=3 * model.x + 2 * model.y <= 12)\nmodel.constraint3 = Constraint(expr=4 * model.x + 5 * model.y >= 11)\n\n# Solve the model\nsolver = SolverFactory('glpk')\nresult = solver.solve(model)\n\n# Display results\nmodel.display()\n"
+    },
+    {
+        "prompt": "Please add constraint: 4 * x + 3 * y <= 12",
+        "code": "\nfrom pyomo.environ import *\nmodel = ConcreteModel()\nmodel.x = Var(domain=NonNegativeReals)\nmodel.y = Var(domain=NonNegativeReals)\nmodel.obj = Objective(expr=3 * model.x + 2 * model.y, sense=minimize)\n\n# Define constraints\nmodel.constraint1 = Constraint(expr=model.x + 2 * model.y <= 8)\nmodel.constraint2 = Constraint(expr=3 * model.x + 2 * model.y <= 12)\nmodel.constraint3 = Constraint(expr=4 * model.x + 3 * model.y <= 12)\n\n# Solve the model\nsolver = SolverFactory('glpk')\nresult = solver.solve(model)\n\n# Display results\nmodel.display()\n"
+    },
+    {
+        "prompt": "Please add constraint: 3 * x + 7 * y == 16",
+        "code": "\nfrom pyomo.environ import *\nmodel = ConcreteModel()\nmodel.x = Var(domain=NonNegativeReals)\nmodel.y = Var(domain=NonNegativeReals)\nmodel.obj = Objective(expr=3 * model.x + 3 * model.y, sense=maximize)\n\n# Define constraints\nmodel.constraint1 = Constraint(expr=model.x + 2 * model.y <= 8)\nmodel.constraint2 = Constraint(expr=3 * model.x + 2 * model.y <= 12)\nmodel.constraint3 = Constraint(expr=3 * model.x + 7 * model.y == 16)\n\n# Solve the model\nsolver = SolverFactory('glpk')\nresult = solver.solve(model)\n\n# Display results\nmodel.display()\n"
+    },
+    {
+        "prompt": "Please add constraint: 10 * x + 9 * y <= 15",
+        "code": "\nfrom pyomo.environ import *\nmodel = ConcreteModel()\nmodel.x = Var(domain=NonNegativeReals)\nmodel.y = Var(domain=NonNegativeReals)\nmodel.obj = Objective(expr=3 * model.x + 3 * model.y, sense=maximize)\n\n# Define constraints\nmodel.constraint1 = Constraint(expr=model.x + 2 * model.y <= 8)\nmodel.constraint2 = Constraint(expr=3 * model.x + 2 * model.y <= 12)\nmodel.constraint3 = Constraint(expr=10 * model.x + 9 * model.y <= 15)\n\n# Solve the model\nsolver = SolverFactory('glpk')\nresult = solver.solve(model)\n\n# Display results\nmodel.display()\n"
+    },
+    {
+        "prompt": "Please add constraint: 5 * x + 10 * y >= 15",
+        "code": "\nfrom pyomo.environ import *\nmodel = ConcreteModel()\nmodel.x = Var(domain=NonNegativeReals)\nmodel.y = Var(domain=NonNegativeReals)\nmodel.obj = Objective(expr=3 * model.x + 1 * model.y, sense=maximize)\n\n# Define constraints\nmodel.constraint1 = Constraint(expr=model.x + 2 * model.y <= 8)\nmodel.constraint2 = Constraint(expr=3 * model.x + 2 * model.y <= 12)\nmodel.constraint3 = Constraint(expr=5 * model.x + 10 * model.y >= 15)\n\n# Solve the model\nsolver = SolverFactory('glpk')\nresult = solver.solve(model)\n\n# Display results\nmodel.display()\n"
+    },
+    {
+        "prompt": "Please add constraint: 3 * x + 9 * y <= 17",
+        "code": "\nfrom pyomo.environ import *\nmodel = ConcreteModel()\nmodel.x = Var(domain=NonNegativeReals)\nmodel.y = Var(domain=NonNegativeReals)\nmodel.obj = Objective(expr=1 * model.x + 2 * model.y, sense=minimize)\n\n# Define constraints\nmodel.constraint1 = Constraint(expr=model.x + 2 * model.y <= 8)\nmodel.constraint2 = Constraint(expr=3 * model.x + 2 * model.y <= 12)\nmodel.constraint3 = Constraint(expr=3 * model.x + 9 * model.y <= 17)\n\n# Solve the model\nsolver = SolverFactory('glpk')\nresult = solver.solve(model)\n\n# Display results\nmodel.display()\n"
+    },
+    {
+        "prompt": "Please add constraint: 8 * x + 2 * y <= 18",
+        "code": "\nfrom pyomo.environ import *\nmodel = ConcreteModel()\nmodel.x = Var(domain=NonNegativeReals)\nmodel.y = Var(domain=NonNegativeReals)\nmodel.obj = Objective(expr=1 * model.x + 1 * model.y, sense=minimize)\n\n# Define constraints\nmodel.constraint1 = Constraint(expr=model.x + 2 * model.y <= 8)\nmodel.constraint2 = Constraint(expr=3 * model.x + 2 * model.y <= 12)\nmodel.constraint3 = Constraint(expr=8 * model.x + 2 * model.y <= 18)\n\n# Solve the model\nsolver = SolverFactory('glpk')\nresult = solver.solve(model)\n\n# Display results\nmodel.display()\n"
+    },
+    {
+        "prompt": "Please add constraint: 3 * x + 4 * y <= 10",
+        "code": "\nfrom pyomo.environ import *\nmodel = ConcreteModel()\nmodel.x = Var(domain=NonNegativeReals)\nmodel.y = Var(domain=NonNegativeReals)\nmodel.obj = Objective(expr=1 * model.x + 3 * model.y, sense=maximize)\n\n# Define constraints\nmodel.constraint1 = Constraint(expr=model.x + 2 * model.y <= 8)\nmodel.constraint2 = Constraint(expr=3 * model.x + 2 * model.y <= 12)\nmodel.constraint3 = Constraint(expr=3 * model.x + 4 * model.y <= 10)\n\n# Solve the model\nsolver = SolverFactory('glpk')\nresult = solver.solve(model)\n\n# Display results\nmodel.display()\n"
+    },
+    {
+        "prompt": "Please add constraint: 1 * x + 8 * y >= 18",
+        "code": "\nfrom pyomo.environ import *\nmodel = ConcreteModel()\nmodel.x = Var(domain=NonNegativeReals)\nmodel.y = Var(domain=NonNegativeReals)\nmodel.obj = Objective(expr=1 * model.x + 3 * model.y, sense=minimize)\n\n# Define constraints\nmodel.constraint1 = Constraint(expr=model.x + 2 * model.y <= 8)\nmodel.constraint2 = Constraint(expr=3 * model.x + 2 * model.y <= 12)\nmodel.constraint3 = Constraint(expr=1 * model.x + 8 * model.y >= 18)\n\n# Solve the model\nsolver = SolverFactory('glpk')\nresult = solver.solve(model)\n\n# Display results\nmodel.display()\n"
+    },
+    {
+        "prompt": "Please add constraint: 6 * x + 9 * y == 5",
+        "code": "\nfrom pyomo.environ import *\nmodel = ConcreteModel()\nmodel.x = Var(domain=NonNegativeReals)\nmodel.y = Var(domain=NonNegativeReals)\nmodel.obj = Objective(expr=3 * model.x + 3 * model.y, sense=maximize)\n\n# Define constraints\nmodel.constraint1 = Constraint(expr=model.x + 2 * model.y <= 8)\nmodel.constraint2 = Constraint(expr=3 * model.x + 2 * model.y <= 12)\nmodel.constraint3 = Constraint(expr=6 * model.x + 9 * model.y == 5)\n\n# Solve the model\nsolver = SolverFactory('glpk')\nresult = solver.solve(model)\n\n# Display results\nmodel.display()\n"
+    },
+    {
+        "prompt": "Please add constraint: 1 * x + 5 * y == 3",
+        "code": "\nfrom pyomo.environ import *\nmodel = ConcreteModel()\nmodel.x = Var(domain=NonNegativeReals)\nmodel.y = Var(domain=NonNegativeReals)\nmodel.obj = Objective(expr=2 * model.x + 3 * model.y, sense=minimize)\n\n# Define constraints\nmodel.constraint1 = Constraint(expr=model.x + 2 * model.y <= 8)\nmodel.constraint2 = Constraint(expr=3 * model.x + 2 * model.y <= 12)\nmodel.constraint3 = Constraint(expr=1 * model.x + 5 * model.y == 3)\n\n# Solve the model\nsolver = SolverFactory('glpk')\nresult = solver.solve(model)\n\n# Display results\nmodel.display()\n"
+    },
+    {
+        "prompt": "Please add constraint: 2 * x + 8 * y <= 12",
+        "code": "\nfrom pyomo.environ import *\nmodel = ConcreteModel()\nmodel.x = Var(domain=NonNegativeReals)\nmodel.y = Var(domain=NonNegativeReals)\nmodel.obj = Objective(expr=3 * model.x + 3 * model.y, sense=minimize)\n\n# Define constraints\nmodel.constraint1 = Constraint(expr=model.x + 2 * model.y <= 8)\nmodel.constraint2 = Constraint(expr=3 * model.x + 2 * model.y <= 12)\nmodel.constraint3 = Constraint(expr=2 * model.x + 8 * model.y <= 12)\n\n# Solve the model\nsolver = SolverFactory('glpk')\nresult = solver.solve(model)\n\n# Display results\nmodel.display()\n"
+    },
+    {
+        "prompt": "Please add constraint: 1 * x + 6 * y >= 19",
+        "code": "\nfrom pyomo.environ import *\nmodel = ConcreteModel()\nmodel.x = Var(domain=NonNegativeReals)\nmodel.y = Var(domain=NonNegativeReals)\nmodel.obj = Objective(expr=3 * model.x + 3 * model.y, sense=maximize)\n\n# Define constraints\nmodel.constraint1 = Constraint(expr=model.x + 2 * model.y <= 8)\nmodel.constraint2 = Constraint(expr=3 * model.x + 2 * model.y <= 12)\nmodel.constraint3 = Constraint(expr=1 * model.x + 6 * model.y >= 19)\n\n# Solve the model\nsolver = SolverFactory('glpk')\nresult = solver.solve(model)\n\n# Display results\nmodel.display()\n"
+    },
+    {
+        "prompt": "Please add constraint: 4 * x + 4 * y <= 16",
+        "code": "\nfrom pyomo.environ import *\nmodel = ConcreteModel()\nmodel.x = Var(domain=NonNegativeReals)\nmodel.y = Var(domain=NonNegativeReals)\nmodel.obj = Objective(expr=2 * model.x + 1 * model.y, sense=minimize)\n\n# Define constraints\nmodel.constraint1 = Constraint(expr=model.x + 2 * model.y <= 8)\nmodel.constraint2 = Constraint(expr=3 * model.x + 2 * model.y <= 12)\nmodel.constraint3 = Constraint(expr=4 * model.x + 4 * model.y <= 16)\n\n# Solve the model\nsolver = SolverFactory('glpk')\nresult = solver.solve(model)\n\n# Display results\nmodel.display()\n"
+    },
+    {
+        "prompt": "Please add constraint: 3 * x + 6 * y == 14",
+        "code": "\nfrom pyomo.environ import *\nmodel = ConcreteModel()\nmodel.x = Var(domain=NonNegativeReals)\nmodel.y = Var(domain=NonNegativeReals)\nmodel.obj = Objective(expr=3 * model.x + 1 * model.y, sense=minimize)\n\n# Define constraints\nmodel.constraint1 = Constraint(expr=model.x + 2 * model.y <= 8)\nmodel.constraint2 = Constraint(expr=3 * model.x + 2 * model.y <= 12)\nmodel.constraint3 = Constraint(expr=3 * model.x + 6 * model.y == 14)\n\n# Solve the model\nsolver = SolverFactory('glpk')\nresult = solver.solve(model)\n\n# Display results\nmodel.display()\n"
+    },
+    {
+        "prompt": "Please add constraint: 7 * x + 7 * y >= 2",
+        "code": "\nfrom pyomo.environ import *\nmodel = ConcreteModel()\nmodel.x = Var(domain=NonNegativeReals)\nmodel.y = Var(domain=NonNegativeReals)\nmodel.obj = Objective(expr=2 * model.x + 2 * model.y, sense=maximize)\n\n# Define constraints\nmodel.constraint1 = Constraint(expr=model.x + 2 * model.y <= 8)\nmodel.constraint2 = Constraint(expr=3 * model.x + 2 * model.y <= 12)\nmodel.constraint3 = Constraint(expr=7 * model.x + 7 * model.y >= 2)\n\n# Solve the model\nsolver = SolverFactory('glpk')\nresult = solver.solve(model)\n\n# Display results\nmodel.display()\n"
+    },
+    {
+        "prompt": "Please add constraint: 10 * x + 9 * y <= 14",
+        "code": "\nfrom pyomo.environ import *\nmodel = ConcreteModel()\nmodel.x = Var(domain=NonNegativeReals)\nmodel.y = Var(domain=NonNegativeReals)\nmodel.obj = Objective(expr=1 * model.x + 2 * model.y, sense=maximize)\n\n# Define constraints\nmodel.constraint1 = Constraint(expr=model.x + 2 * model.y <= 8)\nmodel.constraint2 = Constraint(expr=3 * model.x + 2 * model.y <= 12)\nmodel.constraint3 = Constraint(expr=10 * model.x + 9 * model.y <= 14)\n\n# Solve the model\nsolver = SolverFactory('glpk')\nresult = solver.solve(model)\n\n# Display results\nmodel.display()\n"
+    },
+    {
+        "prompt": "Please add constraint: 9 * x + 6 * y <= 19",
+        "code": "\nfrom pyomo.environ import *\nmodel = ConcreteModel()\nmodel.x = Var(domain=NonNegativeReals)\nmodel.y = Var(domain=NonNegativeReals)\nmodel.obj = Objective(expr=2 * model.x + 3 * model.y, sense=maximize)\n\n# Define constraints\nmodel.constraint1 = Constraint(expr=model.x + 2 * model.y <= 8)\nmodel.constraint2 = Constraint(expr=3 * model.x + 2 * model.y <= 12)\nmodel.constraint3 = Constraint(expr=9 * model.x + 6 * model.y <= 19)\n\n# Solve the model\nsolver = SolverFactory('glpk')\nresult = solver.solve(model)\n\n# Display results\nmodel.display()\n"
+    },
+    {
+        "prompt": "Please add constraint: 9 * x + 7 * y <= 12",
+        "code": "\nfrom pyomo.environ import *\nmodel = ConcreteModel()\nmodel.x = Var(domain=NonNegativeReals)\nmodel.y = Var(domain=NonNegativeReals)\nmodel.obj = Objective(expr=1 * model.x + 3 * model.y, sense=maximize)\n\n# Define constraints\nmodel.constraint1 = Constraint(expr=model.x + 2 * model.y <= 8)\nmodel.constraint2 = Constraint(expr=3 * model.x + 2 * model.y <= 12)\nmodel.constraint3 = Constraint(expr=9 * model.x + 7 * model.y <= 12)\n\n# Solve the model\nsolver = SolverFactory('glpk')\nresult = solver.solve(model)\n\n# Display results\nmodel.display()\n"
+    },
+    {
+        "prompt": "Please add constraint: 8 * x + 10 * y >= 15",
+        "code": "\nfrom pyomo.environ import *\nmodel = ConcreteModel()\nmodel.x = Var(domain=NonNegativeReals)\nmodel.y = Var(domain=NonNegativeReals)\nmodel.obj = Objective(expr=1 * model.x + 2 * model.y, sense=maximize)\n\n# Define constraints\nmodel.constraint1 = Constraint(expr=model.x + 2 * model.y <= 8)\nmodel.constraint2 = Constraint(expr=3 * model.x + 2 * model.y <= 12)\nmodel.constraint3 = Constraint(expr=8 * model.x + 10 * model.y >= 15)\n\n# Solve the model\nsolver = SolverFactory('glpk')\nresult = solver.solve(model)\n\n# Display results\nmodel.display()\n"
+    },
+    {
+        "prompt": "Please add constraint: 10 * x + 9 * y <= 7",
+        "code": "\nfrom pyomo.environ import *\nmodel = ConcreteModel()\nmodel.x = Var(domain=NonNegativeReals)\nmodel.y = Var(domain=NonNegativeReals)\nmodel.obj = Objective(expr=2 * model.x + 3 * model.y, sense=minimize)\n\n# Define constraints\nmodel.constraint1 = Constraint(expr=model.x + 2 * model.y <= 8)\nmodel.constraint2 = Constraint(expr=3 * model.x + 2 * model.y <= 12)\nmodel.constraint3 = Constraint(expr=10 * model.x + 9 * model.y <= 7)\n\n# Solve the model\nsolver = SolverFactory('glpk')\nresult = solver.solve(model)\n\n# Display results\nmodel.display()\n"
+    },
+    {
+        "prompt": "Please add constraint: 4 * x + 7 * y == 8",
+        "code": "\nfrom pyomo.environ import *\nmodel = ConcreteModel()\nmodel.x = Var(domain=NonNegativeReals)\nmodel.y = Var(domain=NonNegativeReals)\nmodel.obj = Objective(expr=3 * model.x + 2 * model.y, sense=minimize)\n\n# Define constraints\nmodel.constraint1 = Constraint(expr=model.x + 2 * model.y <= 8)\nmodel.constraint2 = Constraint(expr=3 * model.x + 2 * model.y <= 12)\nmodel.constraint3 = Constraint(expr=4 * model.x + 7 * model.y == 8)\n\n# Solve the model\nsolver = SolverFactory('glpk')\nresult = solver.solve(model)\n\n# Display results\nmodel.display()\n"
+    }
+
+]
