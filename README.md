@@ -23,8 +23,8 @@ pip install -r requirements.txt
 ## Running the main script: 
 
 python main.py
-Modifying constraints:
-Provide instructions on how users can modify or add new constraints in the model.
+## Modifying constraints:
+a sample prompt:  add a constraint of 2x + 3y >9 to our model 
 
 ## Testing
 
@@ -32,3 +32,4 @@ Provide instructions on how users can modify or add new constraints in the model
 
 Python evaluate.py 
 
+Refer to output screenshots folder 
