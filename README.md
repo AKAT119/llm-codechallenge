@@ -1,4 +1,4 @@
-# ** LLM Engineer - Code Challenge
+# LLM Engineer - Code Challenge
 
 ## Project Description
 
